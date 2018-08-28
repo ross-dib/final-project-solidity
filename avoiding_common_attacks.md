@@ -1,0 +1,3 @@
+There are a few standard attacks - outlined in module 9 of the course - that I considered while writing my contracts. I did not allow any dynamic arrays to be held in order to avoid DOS atacks. 
+I implemented a pull payment system, which kept a record of owner balances and allowed for the owner of a contract to withdraw funds. This design pattern was paired with a circuit breaker implemented by admins if the StoreOwner contract were to be compromised, disabling the withdraw function for every store owner.
+I also avoid reentrancy attacks on my withdraw function by decrementing the account balance before the require statement in which funds are trasnferred so , upon revert, the balance is return to normal.
