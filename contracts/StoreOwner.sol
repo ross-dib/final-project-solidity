@@ -1,5 +1,5 @@
 pragma solidity ^0.4.24;
-import "../solidity-stringutils/src/strings.sol";
+import "../string-utils/src/strings.sol";
 
 /**
     @title StoreOwner contract
